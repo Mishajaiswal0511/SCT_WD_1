@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+     * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+        background-color: black;
+    }
+     .anchor {
+      color: whitesmoke;
+      font-size: 30px;
+      padding: 10px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      padding: 30px;
+   
+    }
+    .container{
+        background-color: white;
+       text-align: center;
+        margin-top: 5vh;
+        height: 300px;
+        padding: 10px;
+    }
+
+a{
+  text-decoration: none;
+  color: white;
+}
+.pra{
+  font-size: 30px;
+  padding: 20px;
+}
+input{
+  height: 40px;
+  width: 600px;
+  font-size: 20PX;
+  text-align: center;
+}
+button{
+  height: 40px;
+ margin: 10px;
+ width: 100px;
+ background-color: brown;
+ border: 2px solid black;
+ font-size: 20px;
+}
+button:hover{
+  background-color: blue;
+}
+.bottom{
+  color: gray;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+p{
+  font-size: 20px;
+ text-align: center;
+
+}
+
+.hide{
+     background-color: white;
+       text-align: center;
+        margin-top: 5vh;
+        height: 300px;
+        padding: 10px;
+        display: flex;
+        flex-direction:column;
+        justify-content: center;
+        display: none;
+}
+.para{
+   padding: 20px;
+   font-size: 20px;
+   color: gray;
+}
+ a:hover{
+      color: bisque;
+      background-color: cadetblue;
+    }
+   
+
+</style>
+<body>
+<div class="options">
+        <div class="anchor" style="font-weight: bold;"><a href="index.html">Home</a></div>
+        <div class="anchor"><a href="menu.html">Menu</a></div>
+        <div class="anchor"><a href="sign.html">SignUp</a></div>
+      </div>
+      <div class="container temp">
+          <h1><i>Subscribe</i></h1>
+          <p class="pra">!!Free Meal Inside!!</p>
+          <p class="pra">Taste the Nutri Heaven difference...</p>
+          <input type="email" placeholder="EMAIL">
+          <button>SIGNUP</button>
+      </div>
+      <div class="hide">
+        <h1><i>Subscribe</i></h1>
+        <p class="para">Great, now please verify your email</p>
+        <p class="para">To let us know it's really you and that you'd like to receive emails from us, please click the link in the confirmation email we just sent you. You can unsubscribe from these emails at any time.</p>
+      </div>
+      <div class="bottom">
+      <p>  Copyright © 2025 Fit Fuel Diet Cafe - All Rights Reserved.
+    
+      </p>
+        <br>
+       <p> Powered by</p>
+        <br>
+         <p style="color: white;"> Misha Jaiswal</p>
+      </div>
+      <script>
+        let butt=document.querySelector("button");
+        let temp=document.querySelector(".temp");
+         let hide=document.querySelector(".hide");
+        let data=document.querySelector("input");
+        console.log(data);
+        butt.addEventListener("click",()=>{
+        if(data.value==""){
+           alert("emailbox cannot be empty");
+
+        }
+        else{
+         
+              if(temp.style.display==="none"){
+                 hide.style.display="block";
+              }
+              else{
+                   hide.style.display="block";
+                   temp.style.display="none"
+              }
+        }
+      })
+      </script>
+</body>
+</html>
